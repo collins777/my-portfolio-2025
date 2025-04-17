@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/my-portfolio-2025/static/js/main.6b0a94c2.js",
+    "static/media/Pair programming-amico.svg": "/my-portfolio-2025/static/media/Pair programming-amico.91af2f632e68f819434fc40050ba1a31.svg",
+    "static/media/About me-pana.svg": "/my-portfolio-2025/static/media/About me-pana.30bcd312a75b0db0ab62bf9cbd264174.svg",
+    "index.html": "/my-portfolio-2025/index.html",
+    "main.6b0a94c2.js.map": "/my-portfolio-2025/static/js/main.6b0a94c2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6b0a94c2.js"
+  ]
+}
