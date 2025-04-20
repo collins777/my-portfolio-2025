@@ -19,6 +19,7 @@ const HomeContainer = styled.section`
   @media (max-width: 768px) {
     flex-direction: column; // mobile
     text-align: center;
+    margin-top: 12.5rem;
   }
 `;
 
@@ -104,6 +105,8 @@ const IllustrationWrap = styled.div`
 
     @media (max-width: 768px) {
       max-width: 300px;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
     }
   }
 `;

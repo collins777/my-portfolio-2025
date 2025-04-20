@@ -18,6 +18,10 @@ const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   color: #0077cc;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -35,15 +39,35 @@ const NavLinks = styled.div`
   }
 `;
 
+// Scroll to a specific section on click
+const handleScroll = (
+  e: React.MouseEvent<HTMLAnchorElement>,
+  sectionId: string
+) => {
+  e.preventDefault(); // prevent default link behavior
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const Navbar: React.FC = () => {
   return (
     <Nav>
-      <Logo>Hello.</Logo>
+      <Logo className="logo">Hello.</Logo>
       <NavLinks>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" onClick={(e) => handleScroll(e, "home")}>
+          Home
+        </a>
+        <a href="#projects" onClick={(e) => handleScroll(e, "projects")}>
+          Projects
+        </a>
+        <a href="#about" onClick={(e) => handleScroll(e, "about")}>
+          About
+        </a>
+        <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>
+          Contact
+        </a>
       </NavLinks>
     </Nav>
   );
