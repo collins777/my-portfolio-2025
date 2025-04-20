@@ -58,6 +58,7 @@ const IllustrationWrap = styled.div`
 `;
 
 const About: React.FC = () => {
+  console.log("About component rendered "); // console log to check if component is rendered
   return (
     <AboutSection id="about">
       <IllustrationWrap>

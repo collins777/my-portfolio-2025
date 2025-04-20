@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -37,6 +38,13 @@ const NavLinks = styled.div`
       color: #0077cc;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 // Scroll to a specific section on click
@@ -59,11 +67,11 @@ const Navbar: React.FC = () => {
         <a href="#home" onClick={(e) => handleScroll(e, "home")}>
           Home
         </a>
-        <a href="#projects" onClick={(e) => handleScroll(e, "projects")}>
-          Projects
-        </a>
         <a href="#about" onClick={(e) => handleScroll(e, "about")}>
           About
+        </a>
+        <a href="#projects" onClick={(e) => handleScroll(e, "projects")}>
+          Projects
         </a>
         <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>
           Contact

@@ -1,21 +1,27 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import { BrowserRouter as Router } from "react-router-dom"; // Import BrowserRouter
 import Navbar from "./components/Navbar";
 import GlobalStyle from "./styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
 
+// Import all components
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={{ theme }}>
+    <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyle />
-        {/* this appears in all routes */}
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        {/* Render all components directly */}
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
       </Router>
     </ThemeProvider>
   );
